@@ -1,12 +1,12 @@
 @hostname = http://localhost
 @port = 3000
-@url = {{hostname}}:{{port}}
+@url_local = {{hostname}}:{{port}}
 
-@url_prod = https://3dd7-87-219-55-87.eu.ngrok.io
+@url = https://tienda-online-prueba.onrender.com
 
 ###
 GET {{url}}/api/products?limit=3&page=1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjYTQ4NjVjZjUyNmEyMDM5Y2EzOTFjIiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ4MDYwMzgsImlhdCI6MTY3NDIwMTIzOH0.Q88TssR1kFBLwDIi8o6fODY9ZOMAIXP0ppGiObx9jl4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjYTkzY2Q1NGJjOWJjYzA3Zjk0MGE2IiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ4MjUzMTgsImlhdCI6MTY3NDIyMDUxOH0.u2-4ZmfjOoSfRCRFp_p4HPWNeou90Bi4Hpvzwh8Yzuc
 ###
 GET {{url}}/api/products/moda
 
@@ -20,15 +20,15 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2QxZDc5
 ###
 POST {{url}}/api/products
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2QxZDc5OWRhYjIzMDIwNzA5NGViIiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ2NDQ1OTgsImlhdCI6MTY3NDAzOTc5OH0.tSszAbz-kcXFXvRXcH2iq147DbXpnQYbNd9qEd9DFLU
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjYTkzY2Q1NGJjOWJjYzA3Zjk0MGE2IiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ4MjUzMTgsImlhdCI6MTY3NDIyMDUxOH0.u2-4ZmfjOoSfRCRFp_p4HPWNeou90Bi4Hpvzwh8Yzuc
 
 {
     "name": "nombre",
-    "description": "chachi",
+    "description": "chachipiruli",
     "price": 23,
     "available": true,
     "stock": 5,
-    "department": "otro",
+    "department": "oficina",
     "image": "" 
 }
 
