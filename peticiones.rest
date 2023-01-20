@@ -1,0 +1,100 @@
+@hostname = http://localhost
+@port = 3000
+@url = {{hostname}}:{{port}}
+
+@url_prod = https://3dd7-87-219-55-87.eu.ngrok.io
+
+###
+GET {{url}}/api/products?limit=3&page=1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjYTQ4NjVjZjUyNmEyMDM5Y2EzOTFjIiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ4MDYwMzgsImlhdCI6MTY3NDIwMTIzOH0.Q88TssR1kFBLwDIi8o6fODY9ZOMAIXP0ppGiObx9jl4
+###
+GET {{url}}/api/products/moda
+
+###
+GET {{url}}/api/products/min/10/max/45
+
+###
+GET {{url}}/api/products/actives
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2QxZDc5OWRhYjIzMDIwNzA5NGViIiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ2NDQ1OTgsImlhdCI6MTY3NDAzOTc5OH0.tSszAbz-kcXFXvRXcH2iq147DbXpnQYbNd9qEd9DFLU
+
+###
+POST {{url}}/api/products
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2QxZDc5OWRhYjIzMDIwNzA5NGViIiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ2NDQ1OTgsImlhdCI6MTY3NDAzOTc5OH0.tSszAbz-kcXFXvRXcH2iq147DbXpnQYbNd9qEd9DFLU
+
+{
+    "name": "nombre",
+    "description": "chachi",
+    "price": 23,
+    "available": true,
+    "stock": 5,
+    "department": "otro",
+    "image": "" 
+}
+
+###
+PUT {{url}}/api/products/63c7e1d71f42f71c2150ffc3
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2QxZDc5OWRhYjIzMDIwNzA5NGViIiwidXNlcl9yb2xlIjoiYWRtaW4iLCJleHAiOjE2NzQ2NDQ1OTgsImlhdCI6MTY3NDAzOTc5OH0.tSszAbz-kcXFXvRXcH2iq147DbXpnQYbNd9qEd9DFLU
+
+{
+    "price": 120
+}
+
+###
+DELETE {{url}}/api/products/63c54c110f7bd1514f2bf0cb
+
+
+#########
+# USERS #
+#########
+@apiUsers = {{url}}/api/users
+
+GET {{apiUsers}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2FmMTVkZDA0OGU5NjRlYmIwYzg4IiwidXNlcl9yb2xlIjoicmVndWxhciIsImV4cCI6MTY3NDYzOTM3OSwiaWF0IjoxNjc0MDM0NTc5fQ.12Qa3XEO5uINwhZT29nQYNWKXU1qAn6OuJXfDWV3LNw
+
+###
+GET {{apiUsers}}/cart
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2FmMTVkZDA0OGU5NjRlYmIwYzg4IiwidXNlcl9yb2xlIjoicmVndWxhciIsImV4cCI6MTY3NDY0NzAxMywiaWF0IjoxNjc0MDQyMjEzfQ.FIuVjo4w2MLLXikSWsF14hieQAiAaIokmZrGpVM9NxQ
+
+###
+GET {{apiUsers}}/cart/add/63c66b59278ae4c4760c0f66
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2FmMTVkZDA0OGU5NjRlYmIwYzg4IiwidXNlcl9yb2xlIjoicmVndWxhciIsImV4cCI6MTY3NDY0MDcxNiwiaWF0IjoxNjc0MDM1OTE2fQ.2DZ18k8Az9Ti2HSYWPOEbV3CILQEK-GUnfshsugHbJ4
+
+###
+GET {{apiUsers}}/cart/remove/63c66b59278ae4c4760c0f66
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNjN2FmMTVkZDA0OGU5NjRlYmIwYzg4IiwidXNlcl9yb2xlIjoicmVndWxhciIsImV4cCI6MTY3NDY0NzAxMywiaWF0IjoxNjc0MDQyMjEzfQ.FIuVjo4w2MLLXikSWsF14hieQAiAaIokmZrGpVM9NxQ
+
+###
+POST {{apiUsers}}
+Content-Type: application/json
+
+{
+    "username": "Margarita",
+    "email": "marg@gmail.com",
+    "password": "A12345ab",
+    "address": "C Principal 32",
+    "age": 19,
+    "role": "admin"
+}
+
+###
+POST {{apiUsers}}/login
+Content-Type: application/json
+
+{
+    "email": "marg@gmail.com",
+    "password": "A12345ab"
+}
+
+###
+PUT {{apiUsers}}/63c7a4bf897bdd1b38f2d5ee
+Content-Type: application/json
+
+{
+    "role": "admin",
+    "email": "luisete@gmail.com"
+}
+
+###
+DELETE {{apiUsers}}/63c7a4bf897bdd1b38f2d5ee
